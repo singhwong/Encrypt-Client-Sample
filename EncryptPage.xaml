@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="EncryptKeyClient.EncryptPage"
+    Visual="Material">
+    <ContentPage.Content>
+        <StackLayout Margin="30" Spacing="10">
+            <Grid ColumnDefinitions="*,auto" HeightRequest="50">
+                <ImageButton Grid.Column="1"
+                        Command="{Binding RandomSecretCommand}"
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        Source="random.png"
+                        Visual="Default" Margin="10"/>
+                <Entry Grid.ColumnSpan="2" Placeholder="4位特定字符"
+                       WidthRequest="230"
+                       HorizontalOptions="Center"
+                       MaxLength="4"
+                       Text="{Binding SecretText,Mode=TwoWay}"
+                       Visual="Default"
+                       ClearButtonVisibility="WhileEditing"
+                       Keyboard="Plain"
+                       ReturnType="Default"
+                       IsSpellCheckEnabled="False"
+                       IsTextPredictionEnabled="False"
+                       TextColor="Red"
+                       HeightRequest="30"/>
+            </Grid>
+            <Entry Placeholder="输入字符"
+                   WidthRequest="230"
+                   HorizontalOptions="Center"
+                   Visual="Default"
+                   Text="{Binding KeyText,Mode=TwoWay}"
+                   ClearButtonVisibility="WhileEditing"
+                   Keyboard="Plain"
+                   ReturnType="Default"
+                   IsSpellCheckEnabled="False"
+                   IsTextPredictionEnabled="False"
+                   HeightRequest="50"/>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Spacing="30">
+                <ImageButton Source="encrypt.png"
+                             HeightRequest="30"
+                             Command="{Binding EncryptCommand}"/>
+                <ImageButton Source="decrypt.png"
+                             HeightRequest="30"
+                             Command="{Binding DecryptCommand}"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Editor Text="{Binding ResultText,Mode=OneWay}"
+                        HeightRequest="300"
+                        Visual="Default"
+                        IsReadOnly="True"/>
+                <ImageButton HorizontalOptions="Center"
+                        Command="{Binding ToClipboardCommand}"
+                        Source="copy.png"
+                             HeightRequest="30"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
