@@ -50,9 +50,14 @@ namespace EncryptKeyClient.ViewModel
             });
             async Task<bool> SetKeyTextInputErrorToast()
             {
-                if (SecretText.Length != 4)
+                if (string.IsNullOrEmpty(SecretText)||SecretText.Length != 4)
                 {
                     await App.Current.MainPage.DisplayAlert("提醒", "特定字符不能为空且长度必须为4！", "好的");
+                    return true;
+                }
+                if (string.IsNullOrEmpty(KeyText))
+                {
+                    await App.Current.MainPage.DisplayAlert("提醒", "待加密内容不能为空！", "好的");
                     return true;
                 }
                 return false;

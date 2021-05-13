@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{BD62F9A5-6CCB-4B1D-AA7D-72695D5E9408}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EncryptKeyClient" expanded="True" selected="True">
+            <Node name="EncryptKeyClient" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="EncryptHelper" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
+            </Node>
+            <Node name="EncryptKeyClient.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="EncryptKeyClient.iOS" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EncryptKeyClient.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.EncryptKeyClient.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CD330D2A-5587-47BB-8E6B-BFBD556852E3" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

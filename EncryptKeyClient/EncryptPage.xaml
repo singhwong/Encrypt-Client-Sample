@@ -12,7 +12,8 @@
                         HeightRequest="30"
                         WidthRequest="30"
                         Source="random.png"
-                        Visual="Default" Margin="10"/>
+                        Visual="Default" Margin="10"
+                             BackgroundColor="Transparent"/>
                 <Entry Grid.ColumnSpan="2" Placeholder="4位特定字符"
                        WidthRequest="230"
                        HorizontalOptions="Center"
@@ -40,13 +41,14 @@
                    HeightRequest="50"/>
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
-                         Spacing="30">
-                <ImageButton Source="encrypt.png"
-                             HeightRequest="30"
-                             Command="{Binding EncryptCommand}"/>
-                <ImageButton Source="decrypt.png"
-                             HeightRequest="30"
-                             Command="{Binding DecryptCommand}"/>
+                         Spacing="50">
+                <Button Text="Encrypt"
+                        Command="{Binding EncryptCommand}"
+                        BackgroundColor="IndianRed">
+                </Button>
+                <Button Text="Decrypt"
+                        Command="{Binding DecryptCommand}"
+                        BackgroundColor="SteelBlue"/>
             </StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Editor Text="{Binding ResultText,Mode=OneWay}"
